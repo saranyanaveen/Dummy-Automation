@@ -1,0 +1,50 @@
+name-template: 'v$NEXT_MAJOR.$NEXT_MINOR.$NEXT_PATCH'
+tag-template: 'v$NEXT_MAJOR.$NEXT_MINOR.$NEXT_PATCH'
+
+categories:
+  - title: '🚨 Breaking Changes'
+    labels:
+      - 'breaking change'
+    bump: major
+
+  - title: '✨ New Features'
+    labels:
+      - 'feature'
+    bump: minor
+
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'fix'
+      - 'bugfix'
+      - 'bug'
+    bump: patch
+
+  - title: '🛠 Maintenance'
+    labels:
+      - 'chore'
+      - 'refactor'
+    bump: patch
+
+change-template: '- $TITLE (@$AUTHOR) (#$NUMBER)'
+
+version-resolver:
+  major:
+    labels:
+      - 'major'
+    bump: major
+  minor:
+    labels:
+      - 'minor'
+    bump: minor
+  patch:
+    labels:
+      - 'patch'
+    bump: patch
+  default: patch
+
+template: |
+  ## What’s Changed
+  $CHANGES
+
+  ## Contributors
+  $CONTRIBUTORS
